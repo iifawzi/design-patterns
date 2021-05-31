@@ -1,13 +1,9 @@
+// Fly Algorithms
+
 interface flyable {
     fly(): any
 }
 
-interface quackable {
-    quack(): any
-}
-
-
-// behaviour classes: 
 class flyingWithWings implements flyable {
     fly() {
         console.log("I will make you fly with wings");
@@ -28,9 +24,15 @@ class flyOnRocket implements flyable {
 }
 
 class FlyNoWay implements flyable {
-    fly(){
+    fly() {
         console.log("i'm not able to fly");
     }
+}
+
+// Quack Algorithms: 
+
+interface quackable {
+    quack(): any
 }
 
 class quack implements quackable {
@@ -45,6 +47,7 @@ class squeek implements quackable {
     }
 }
 
+// CLIENT: 
 
 abstract class duck {
     protected flyBehaviour: flyable;
@@ -62,16 +65,19 @@ abstract class duck {
         this.quackBehaviour.quack();
     }
 
-    public swimming(){
+    public swimming() {
         console.log("all swims");
     }
 
     // using this way we can change the behaviour dynamically!!!!!!
-    public setflyBehaviour(flyBehaviour: flyable){
+    public setflyBehaviour(flyBehaviour: flyable) {
         this.flyBehaviour = flyBehaviour;
     }
 
 }
+
+
+
 
 
 class rubberDuck extends duck {
@@ -80,7 +86,6 @@ class rubberDuck extends duck {
     }
 
 }
-
 
 const rubber = new rubberDuck();
 rubber.performFlying(); // initially can't fly
