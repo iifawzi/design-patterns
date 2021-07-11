@@ -1,0 +1,22 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "description": "A playground to practice the design patterns while reading Head first design patterns book - using Typescript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iifawzi/design-patterns.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iifawzi/design-patterns/issues"
+  },
+  "homepage": "https://github.com/iifawzi/design-patterns#readme",
+  "dependencies": {
+    "ts-node": "^10.0.0"
+  }
+}
